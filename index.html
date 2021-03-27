@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Weekly D3 - Start Screen</title>
+		<link rel="stylesheet" href="/resources/style.css" />
+		<noscript>
+			<div style="width:100%; height:100%; position:fixed; background-color:white;">
+				<p>JavaScript is disabled. Please enable JavaScript and reload the page.</p>
+			</div>
+		</noscript>
+	</head>
+	<body>
+		<div id="menubar" style="z-index:2;">
+			<button class="link" onclick="window.location.assign('/editor-start.html');">
+				Write New Article
+			</button>
+			<button class="link" disabled="disabled">Read Articles</button>
+		</div>
+		<div class="mainarea" style="height:85%;">
+			<center>
+				<h1>Write an article</h1>
+				<h2>Note: The editor is pretty picky about what browsers work.</h2>
+				<button class="link" style="height:30px;" onclick="window.location.assign('/editor-start.html')">Go!</button><br>
+				<img src="/resources/editor-screenshot.png" title="Screenshot" />
+			</center>
+		</div>
+		<hr>
+		<div class="mainarea" style="height:85%;">
+			<center>
+				<h1>Reading will come soon.</h1>
+			</center>
+		</div>
+		<style>
+			#menubar {
+				height:10%; /* OF THE SCREEN, CHROME! */
+				width:100%;
+				background-color:rgb(0,200,200);
+				font-family:sans-serif;
+				position:-webkit-sticky;
+				position:sticky;
+				top:0;
+				overflow-x:visible;
+			}
+			button.link {
+				height:100%;
+				min-height:100%;
+				display:inline-block;
+				z-index:2;
+				background-color:white;
+				border:1px solid black;
+				transition:background-color 0.3s;
+			}
+			button.link:hover {
+				background-color:cyan;
+			}
+			.mainarea {
+				width:100%;
+			}
+			hr {
+				background-color:#a3a3a3;
+				height:1px;
+				border:none;
+			}
+			img {
+				height:30%;
+				width:62.571429%;
+				/* it's 9999 because vt4browsers uses a z-index of 99999 and i want to be below it [probably added by a 5-year-old] */
+				position:relative;
+				z-index:9999;
+			}
+			body {
+				position:relative;
+				margin:0;
+			}
+		</style>
+	</body>
+</html>
